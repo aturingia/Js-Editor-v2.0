@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto:wght@400;500;700;900&display=swap');
+
+/* ======= Estilos ====== */
+ 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+ body {   
+  font-size: 16px;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #272822;
+  font-family: "Roboto", sans-serif;
+  background-color: #272822;
+}
+
+.grid-container > * {
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 500;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #9C27B0;
+  }
+
+label i {
+   padding-right: 5px;
+  }
+
+
+
+.header h1 {
+   position: center;
+  }
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logotipo {
+  display: flex;
+  align-items: center;
+   color: #CB1DCD;
+}
+
+.link-a {
+   text-decoration: none;
+   color: #9C27B0;
+}
+.nav-sup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-run {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-inf {
+  display: flex;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.btn {
+    padding: 1px 3px 1px 3px;  
+  }
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #CB1DCD;
+}
+
+/*#code {
+  /flex: 1;
+  font-family: "Ubuntu", sans-serif; 
+}
+*/
+#console {
+  height: 300px;
+  background-color: black;
+  color: white;
+  overflow: auto;
+  font-family: 'Inconsolata', monospace;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.CodeMirror {
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  height: 435px;
+}
+
+.activeline {
+  background: #373831; /* Cambia el color de fondo de la línea activa según tu preferencia */
+}
+
+.cm-s-monokai .cm-keyword {font-style: italic;}
+.cm-s-monokai .cm-function {font-style: italic;}
+.cm-s-monokai .cm-boolean {font-style: italic;}
+
+
+/* Estilos del botón del menú */
+.dropbtn {
+  background-color: chartreuse;
+  color: #CB1DCD;
+  padding: 10px;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilos del contenedor del menú desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Estilos del contenido del menú desplegable */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: chartreuse;
+  min-width: 160px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  right: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Estilos de las opciones del menú desplegable */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Cambiar el color del texto cuando se pasa el ratón por encima */
+.dropdown-content a:hover {
+  background-color: black;
+  color: #fff;
+}
+
+/* Mostrar el menú desplegable al pasar el ratón por encima del botón */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Ajustar el ancho del menú desplegable al del botón */
+.dropdown-content {
+  min-width: 100%;
+}
+
+
+
+/* ======= Maquetado  ======== */
+.header {
+  grid-area: header;
+  background-color: chartreuse; 
+ }
+ 
+ .editor {
+   grid-area: editor;
+   background-color: rgb(9, 208, 243);
+ }
+ 
+ .preview {
+   grid-area: preview;
+   background-color: chocolate;
+   
+ }
+ 
+ .footer {
+   grid-area: footer;
+   color: #CB1DCD;
+   background-color: chartreuse;
+ }
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template: 
+  "header" 7%
+  "editor"  52%
+  "preview" 37%
+  "footer" auto /
+    100%;
+
+}
+
+@media(min-width: 768px) {
+  #console {
+    height: 700px;
+  }
+  
+  .CodeMirror {
+    height: 700px;
+  }
+  .grid-container {    
+    grid-template:
+   "header header" 10%
+   "editor preview" auto
+   "footer footer" 10% /
+     60%    auto;
+  }
+}
+
+@media (min-width: 1200px ) {
+  .grid-container{
+  grid-template:
+   "header header"
+   "editor preview"
+   "footer footer" /
+     60%    auto; 
+  }
+}

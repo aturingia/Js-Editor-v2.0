@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="codemirror.css">
+    <link rel="stylesheet" href="monokai.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="show-hint.css">
+    <link rel="stylesheet" type="text/css" href="foldgutter.css">
+    <link rel="shorcut icon" size="16x16 24x24 32x32 48x48" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Editor de JavaScript</title>
+  
+  </head>
+  
+  <body class="grid-container">
+    
+    <header class="header">
+      <div class="logotipo">
+       <!--<label  class="logo"><i class='bx bx-code-block'></i></label>-->
+        <img src="https://github.com/aturingia/img-src/blob/main/code-web.png?raw=true" width="36px"  heigth="36px" alt="isotipo">
+      <h1>Js Editor</h1>
+      </div>
+     
+    <!--<div class="link"> 
+      <a rel="noopener" target="_blank" href="https://developer.mozilla.org/es/" class="link-a">MDN</a> 
+      <a rel="noopener" target="_blank" href="https://chat.openai.com/" class="link-a">ChatGPT</a> 
+    </div>-->
+
+    <div class="dropdown">
+      <button class="dropbtn"><i class='bx bx-menu'></i></button>
+      <div class="dropdown-content">
+        <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" rel="noopener" target="_blank">MDN Js</a>
+        <a href="https://chat.openai.com/" rel="noopener" target="_blank">chatGpt</a>
+        <a href="https://www.aulascript.com/evaluar/" rel="noopener" target="_blank">aulascript</a>
+    
+      </div>
+      </div>
+              
+    </header>
+  
+    <editor class="editor">    
+      <div class="nav-sup">
+        <label><i class='bx bxl-javascript'></i>JAVASCRIPT</label>
+        <div class="nav-run">
+          <button id="ejecutarCodigo" class="btn">Ejecutar</button>
+          <p>Ctrl + Enter</p>
+        </div>
+      </div>
+    
+      <div class="code">
+        <textarea id='code-js' name='code-js'></textarea>
+      </div>
+    
+      <div class="nav-inf">
+        <button id="downloadJs" class="btn">Descargar</button>
+        <input type="file" id="fileInputJs" accept=".txt, .js">
+      </div>      
+     </editor>
+  
+    <preview class="preview">
+      <label><i class='bx bx-play'></i>OUTPUT</label>
+      <div id="console"></div>
+    </preview>
+    
+    <footer class="footer">&copy; <a rel="noopener" target="_blank"  href="https://github.com/dashboard" class="link-a">Js Editor</a></footer>
+
+    <script src="codemirror.js"></script>
+    <script src="javascript.js"></script>
+    <script src="main.js"></script>
+    <script src="show-hint.js"></script>
+    <script src="javascript-hint.js"></script>
+    <script src="closebrackets.js"></script>
+    <script src="matchbrackets.js"></script>
+    <script src="hardwrap.js"></script>
+    <script src="foldgutter.js"></script>
+    <script src="foldcode.js"></script>
+    <script src="indent-fold.js"></script>
+    <script src="brace-fold.js"></script>
+    <script src="active-line.js"></script>
+  </body>
+</html>
