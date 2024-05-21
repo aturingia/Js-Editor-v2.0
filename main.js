@@ -22,19 +22,10 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code-js"), {
    var consoleElement = document.getElementById("console");
 
     // Redirigir la salida de la consola al elemento HTML
-    //console.log = function (message) {
-    //    consoleElement.innerHTML += `<p>${message}</p>`;
-    //    consoleElement.scrollTop = consoleElement.scrollHeight;
-    //};
-
-console.log = function (message) {
-    // Reemplazar los caracteres de escape
-    message = message.replace(/\\n/g, '<br/>').replace(/\\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
-    // Agregar el mensaje al HTML
-    consoleElement.innerHTML += `<p>${message}</p>`;
-    // Desplazarse al final del contenido
-    consoleElement.scrollTop = consoleElement.scrollHeight;
-};
+    console.log = function (message) {
+        consoleElement.innerHTML += `<p>${message}</p>`;
+        consoleElement.scrollTop = consoleElement.scrollHeight;
+    };
 
 
     // Limpiar la consola
