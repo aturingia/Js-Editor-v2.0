@@ -22,10 +22,18 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code-js"), {
    var consoleElement = document.getElementById("console");
 
     // Redirigir la salida de la consola al elemento HTML
+    //console.log = function (message) {
+    //    consoleElement.innerHTML += `<p>${message}</p>`;
+    //    consoleElement.scrollTop = consoleElement.scrollHeight;
+    //};
+
     console.log = function (message) {
-        consoleElement.innerHTML += `<p>${message}</p>`;
-        consoleElement.scrollTop = consoleElement.scrollHeight;
-    };
+    // Reemplazar saltos de línea con <br> y tabulaciones con espacios
+    message = message.replace(/\n/g, '<br>').replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;');
+    consoleElement.innerHTML += `<p>${message}</p>`;
+    consoleElement.scrollTop = consoleElement.scrollHeight;
+};
+
 
 
     // Limpiar la consola
