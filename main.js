@@ -29,7 +29,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code-js"), {
 
     console.log = function (message) {
     // Reemplazar los caracteres de escape
-    message = message.replace(/\\n/g, '<br />').replace(/\\t/g, '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp').replace(/\\"/g, '"').replace(/\\'/g, "'");
+    message = message.replace(/\<br />/g, '\n').replace(/\&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/g, '\t').replace(/\\"/g, '"').replace(/\\'/g, "'");
     // Agregar el mensaje al HTML
     consoleElement.innerHTML += `<p>${message}</p>`;
     // Desplazarse al final del contenido
