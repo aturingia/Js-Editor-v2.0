@@ -63,7 +63,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code-js"), {
 
       try {
         // Ejecuta el código en la consola
-        eval(code);
+        Function(code)();
       } catch (error) {
         console.error("Error al ejecutar el código:", error);
       }
