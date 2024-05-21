@@ -45,7 +45,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code-js"), {
     function executeCode(code) {
         try {
             // Utilizar eval para ejecutar el código (¡ten en cuenta los riesgos de seguridad!)
-            eval(code);
+            Function(code)();
         } catch (error) {
             console.error(error);
         }
