@@ -6,7 +6,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code-js"), {
         lineNumbers: true, // Muestra números de línea
         autoCloseBrackets: true, // cierra automáticamente llaves, corchetes, parentésis y comillas.
         matchBrackets: true , // resalta los brackets correspondientes.
-        lineWrapping: true, // corta la linea de código y la continúa debajo de acuerdo ancho del editor.
+        lineWrapping: false, // corta la linea de código y la continúa debajo de acuerdo ancho del editor.
         indentUnit: 2, // Tamaño de la sangría en espacios.
         //tabSize: 2, // Tamaño de la tabulación en espacios.
         indentWithTabs: false, // Indentación con espacios en lugar de tabulaciones.
