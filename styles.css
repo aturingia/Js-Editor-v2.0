@@ -120,7 +120,7 @@ label i {
 .cm-s-monokai .cm-keyword {font-style: italic;}
 .cm-s-monokai .cm-function {font-style: italic;}
 .cm-s-monokai .cm-boolean {font-style: italic;}
-.cm-s-monokai .CodeMirror-gutters { background: #272822; border-right: 1px solid #272822;; }
+.cm-s-monokai .CodeMirror-gutters { background: #2e2e2c; border-right: 1px solid #272822;; }
 
 
 /* Estilos del botón del menú */
